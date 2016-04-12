@@ -1,22 +1,12 @@
 module.exports = function(grunt){
   grunt.initConfig({
-    concat: {
-      dist: {
-        src: ['asset/sass/*.sass'],
-        dest: 'asset/sass/dist.sass'
-      }
-    },
-    uglify: {
-      my_target: {
-        files: {
-          'dest/output.min.js': ['src/input1.js', 'src/input2.js']
-        }
-      }
-    },
     sass: {
       dist: {
         files: {
-          'asset/compile/dist.css': 'asset/sass/dist.sass'
+          'asset/compile/style.css': 'asset/sass/style.sass'
+        },
+        options:{
+          style: 'compact'
         }
       }
     },
@@ -28,6 +18,25 @@ module.exports = function(grunt){
           spawn: false,
         },
       },
+    },
+    imagemin: {                          // Task
+      dist: {                         // Another target
+        files: [{
+          expand: true,                  // Enable dynamic expansion
+          cwd: 'asset/img/',                   // Src matches are relative to this path
+          src: ['**/*.{png,jpg,gif}'],   // Actual patterns to match
+          dest: 'asset/compile/img'                  // Destination path prefix
+        }]
+      }
+    },
+    connect: {
+      dist: {
+        options: {
+          port: 8000,
+          hostname: '*',
+          keepalive: true
+        }
+      }
     }
   });
 
@@ -36,7 +45,9 @@ module.exports = function(grunt){
   grunt.loadNpmTasks('grunt-contrib-sass');
   grunt.loadNpmTasks('grunt-contrib-watch');
   grunt.loadNpmTasks('grunt-contrib-imagemin');
+  grunt.loadNpmTasks('grunt-contrib-imagemin');
+  grunt.loadNpmTasks('grunt-contrib-connect');
 
 
-  grunt.registerTask('default', ['concat:dist','sass:dist']);
+  grunt.registerTask('default', ['sass:dist','imagemin:dist','connect:dist']);
 }
