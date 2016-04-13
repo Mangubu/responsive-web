@@ -3,7 +3,7 @@ module.exports = function(grunt){
     sass: {
       dist: {
         files: {
-          'asset/compile/style.css': 'asset/sass/style.sass'
+          'asset/compile/css/style.css': 'asset/sass/style.sass'
         },
         options:{
           style: 'compact'
@@ -11,11 +11,12 @@ module.exports = function(grunt){
       }
     },
     watch: {
-      dist: {
-        files: './*',
-        tasks: ['default'],
+      sass: {
+        files: ['**/*.sass'],
+        tasks: ['sass'],
         options: {
-          spawn: false,
+          livereload: true,
+          spawn: false
         },
       },
     },
@@ -32,9 +33,7 @@ module.exports = function(grunt){
     connect: {
       dist: {
         options: {
-          port: 8000,
-          hostname: '*',
-          keepalive: true
+          port: 8000
         }
       }
     }
@@ -45,9 +44,8 @@ module.exports = function(grunt){
   grunt.loadNpmTasks('grunt-contrib-sass');
   grunt.loadNpmTasks('grunt-contrib-watch');
   grunt.loadNpmTasks('grunt-contrib-imagemin');
-  grunt.loadNpmTasks('grunt-contrib-imagemin');
   grunt.loadNpmTasks('grunt-contrib-connect');
 
 
-  grunt.registerTask('default', ['sass:dist','imagemin:dist','connect:dist']);
+  grunt.registerTask('default', ['sass:dist','connect:dist','watch:sass']);
 }

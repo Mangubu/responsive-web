@@ -2,40 +2,46 @@
 <html lang="fr">
 <head>
   <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Titre de la page</title>
   <link rel="stylesheet" href="asset/compile/css/style.css">
 </head>
 <body>
   <header>
     <div class="top-head">
-      <img src="asset/img/header/mobile/icon_burger.png"/>
-      <img src="asset/img/logo/logo.png"/>
-      <img src="asset/img/header/mobile/icon_search.png"/>
+      <img class="icon-bruger" src="asset/img/header/mobile/icon_burger.png"/>
+      <img class="icon-logo" src="asset/img/logo/logo.png"/>
+      <img class="icon-search " src="asset/img/header/mobile/icon_search.png"/>
     </div>
     <div class="banner">
-      <div class="banner-head-menu"></div>
-      <div class="banner-head-text">
-        Réservez instantanément dans les meilleurs salons de coiffure,
-        instituts de beauté et Spas, jusqu’à -50%
+      <div class="banner-background">
+        <img src="asset/img/photo/mobile/photo.png"/>
+        <div class="banner-head-menu"></div>
+        <div class="banner-head-text">
+          Réservez instantanément dans les meilleurs salons de coiffure,
+          instituts de beauté et Spas, jusqu’à -50%
+        </div>
       </div>
       <div class="banner-head-reservation">
         <ul>
           <li>
-            <img src="asset/img/header/icon_search.png"/>
-            Que souhaitez vous reserver
+            <label for="reserv">
+              <img src="asset/img/header/icon_search.png"/>
+            </label
+            <input id="reserv" placeholder="Que souhaitez vous reserver ?" />
           </li>
           <li>
-            <img src="asset/img/header/icon_where.png"/>
-            Ville, adresse, code postal, ...
+            <label for="locality">
+              <img src="asset/img/header/icon_where.png"/>
+            </label>
+            <input id="locality" placeholder="Ville, adresse, code postal, ..." />
           </li>
           <li>
             <img src="asset/img/header/icone_calendar.png"/>
-            Toutes les actus
-          </li>
-          <li>
-            <input type="submit" value="RECHERCHER"/>
+            <input placeholder="Toutes les actus" />
           </li>
         </ul>
+        <input type="submit" value="RECHERCHER"/>
       </div>
     </div>
   </header>
@@ -142,9 +148,10 @@
       <button>Voir toutes les prestations</button>
     </section>
     <footer>
-      <img src="asset/img/footer/mobile/footer.png">
+      <!--<img src="asset/img/footer/mobile/footer.png">-->
     </footer>
   </div>
 </body>
 <script src="script.js"></script>
+<script src="//localhost:35729/livereload.js"></script>
 </html>
