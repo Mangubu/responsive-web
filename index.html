@@ -9,13 +9,13 @@
 <body>
   <header>
     <div class="top-head">
-      <img class="icon-bruger" src="asset/img/header/mobile/icon_burger.png"/>
-      <img class="icon-logo" src="asset/img/logo/logo.png"/>
-      <img class="icon-search " src="asset/img/header/mobile/icon_search.png"/>
+      <img alt="Lorem pixum" class="icon-bruger" src="asset/compile/img/header/mobile/icon_burger.png"/>
+      <img alt="Lorem pixum" class="icon-logo" src="asset/compile/img/logo/logo.png"/>
+      <img alt="Lorem pixum" class="icon-search " src="asset/compile/img/header/mobile/icon_search.png"/>
     </div>
     <div class="banner">
       <div class="banner-background">
-        <img src="asset/img/photo/mobile/photo.png"/>
+        <img alt="Lorem pixum" src="asset/compile/img/photo/mobile/photo.png"/>
         <div class="banner-head-menu"></div>
         <div class="banner-head-text">
           Réservez instantanément dans les meilleurs salons de coiffure,
@@ -23,76 +23,70 @@
         </div>
       </div>
       <div class="banner-head-reservation">
-        <ul>
-          <li>
-            <label for="reserv">
-              <img src="asset/img/header/icon_search.png"/>
-            </label>
-            <input id="reserv" placeholder="Que souhaitez vous reserver ?" />
-          </li>
-          <li>
-            <label for="locality">
-              <img src="asset/img/header/icon_where.png"/>
-            </label>
-            <input id="locality" placeholder="Ville, adresse, code postal, ..." />
-          </li>
-          <li>
-            <label for="calendar">
-              <img src="asset/img/header/icone_calendar.png"/>
-            </label>
-            <input id="calendar" placeholder="Toutes les actus" />
-          </li>
-        </ul>
-        <div class="banner-head-reservation-submit">
-          <input type="submit" value="RECHERCHER"/>
-        </div>
+        <form  method="POST">
+          <ul>
+            <li>
+              <label for="reserv">
+                <img alt="Lorem pixum" src="asset/compile/img/header/icon_search.png"/>
+              </label>
+              <input type="text" id="reserv" placeholder="Que souhaitez vous reserver ?" />
+            </li>
+            <li>
+              <label for="locality">
+                <img alt="Lorem pixum" src="asset/compile/img/header/icon_where.png"/>
+              </label>
+              <input type="text" id="locality" placeholder="Ville, adresse, code postal, ..." />
+            </li>
+            <li>
+              <label for="calendar">
+                <img alt="Lorem pixum" src="asset/compile/img/header/icone_calendar.png"/>
+              </label>
+              <input type="number" id="calendar" placeholder="Toutes les actus" />
+            </li>
+          </ul>
+          <div class="banner-head-reservation-submit">
+            <input type="submit" value="RECHERCHER"/>
+          </div>
+        </form>
       </div>
     </div>
   </header>
   <section class="promesse">
     <div class="promesse-element">
-      <div>
-        <img src="asset/img/promesse/icon_search_prom.png" />
-      </div>
-      <div>
-        2 000<br/>
-        adresses<br/>
-        sélectionnées pour
+      <img alt="Lorem pixum" src="asset/compile/img/promesse/icon_search_prom.png" />
+      <div class="promesse-element-text">
+        <span class="num">2 000</span>
+        <span class="type">adresses</span>
+        <span class="desc">sélectionnées pour
         réserver en toute
-        confiance
+        confiance</span>
       </div>
     </div>
     <div class="promesse-element">
-      <div>
-        <img src="asset/img/promesse/icon_bulle_prom.png" />
-      </div>
-      <div>
-        50 000<br/>
-        avis<br/>
-        certifiés pour vous
-        aider dans votre choix
+      <img alt="Lorem pixum" src="asset/img/promesse/icon_bulle_prom.png" />
+      <div class="promesse-element-text" >
+        <span class="num">50 000</span>
+        <span class="type">avis</span>
+        <span class="desc">certifiés pour vous
+        aider dans votre choix</span>
       </div>
     </div>
     <div class="promesse-element">
-      <div>
-        <img src="asset/img/promesse/icon_label_prom.png" />
-      </div>
-      <div>
-        10 000<br/>
-        prestations<br/>
-        jusqu’à -50% pour
-        toutes vos envies
+      <img alt="Lorem pixum" src="asset/img/promesse/icon_label_prom.png" />
+      <div class="promesse-element-text" >
+        <span class="num">10 000</span>
+        <span class="type">prestations</span>
+        <span class="desc">jusqu’à -50% pour
+        toutes vos envies</span>
       </div>
     </div>
     <div class="promesse-element">
-      <div>
-        <img src="asset/img/promesse/icon_calendar_prom.png" />
-      </div>
-      <div>
-        100 000<br/>
-        rendez-vous<br/>
-        déjà pris instantanément
-        sur balinea
+      <img alt="Lorem pixum" src="asset/img/promesse/icon_calendar_prom.png" />
+      <div class="promesse-element-text">
+        <span class="num">100 000</span>
+        <span class="type">rendez-vous</span>
+        <span class="desc">déjà pris instantanément
+        sur balinea</span>
       </div>
     </div>
   </section>
@@ -107,52 +101,76 @@
   </section>
   <section class="mosaique">
     <div class="mosaique-title">
-      Les prestations que vous réservez le plus
+      <p>Les prestations que <span class="title-colored">vous</span> réservez le plus</p>
     </div>
     <div class="mosaique-element">
       <div class="mosaique-element-img">
-        <img />
+        <img alt="Lorem pixum" src="asset/compile/img/mosaique/mobile/photo1.png" />
       </div>
       <div class="mosaique-element-detail">
-        Spa dès 39€
-      </div>
-    </div>
-    <div class="mosaique-element">
-      <div class="mosaique-element-img">
-        <img />
-      </div>
-      <div class="mosaique-element-detail">
-        Spa dès 39€
+        <p>Massage <span class="price">dès 39€</span></p>
       </div>
     </div>
     <div class="mosaique-element">
       <div class="mosaique-element-img">
-        <img />
+        <img alt="Lorem pixum" src="asset/compile/img/mosaique/mobile/photo2.png" />
       </div>
       <div class="mosaique-element-detail">
-        Spa dès 39€
+        <p>Spa <span class="price">dès 39€</span></p>
       </div>
     </div>
     <div class="mosaique-element">
       <div class="mosaique-element-img">
-        <img />
+        <img alt="Lorem pixum" src="asset/compile/img/mosaique/mobile/photo3.png" />
       </div>
       <div class="mosaique-element-detail">
-        Spa dès 39€
+        <p>Spa <span class="price">dès 39€</span></p>
       </div>
     </div>
     <div class="mosaique-element">
       <div class="mosaique-element-img">
-        <img />
+        <img alt="Lorem pixum" src="asset/compile/img/mosaique/mobile/photo4.png" />
       </div>
       <div class="mosaique-element-detail">
-        Spa dès 39€
+        <p>Spa <span class="price">dès 39€</span></p>
       </div>
     </div>
-    <button>Voir toutes les prestations</button>
+    <div class="mosaique-element">
+      <div class="mosaique-element-img">
+        <img alt="Lorem pixum" src="asset/compile/img/mosaique/mobile/photo5.png" />
+      </div>
+      <div class="mosaique-element-detail">
+        <p>Spa <span class="price">dès 39€</span></p>
+      </div>
+    </div>
+    <div class="mosaique-button">
+      <a class="button" href="#">Voir toutes les prestations <img alt="Lorem pixum" src="asset/compile/img/mosaique/mobile/arrow.png" /></a>
+    </div>
   </section>
   <footer>
-    <!--<img src="asset/img/footer/mobile/footer.png">-->
+    <div class="footer-hastag">
+      <p><a href="#">#beautyspaetvous</a></p>
+    </div>
+    <div class="footer-social">
+      <a href="">
+        <img alt="Lorem pixum" src="asset/compile/img/social/mobile/facebook.png"/>
+      </a>
+      <a href="">
+        <img alt="Lorem pixum" src="asset/compile/img/social/mobile/twitter.png"/>
+      </a>
+      <a href="">
+        <img alt="Lorem pixum" src="asset/compile/img/social/mobile/instagram.png"/>
+      </a>
+      <a href="">
+        <img alt="Lorem pixum" src="asset/compile/img/social/mobile/gplus.png"/>
+      </a>
+      <a href="">
+        <img alt="Lorem pixum" src="asset/compile/img/social/mobile/youtubel.png"/>
+      </a>
+    </div>
+    <div class="footer-ml">
+      <p>@ Copyright 2014 Beautyspa. Tous droits réservés.</p>
+    </div>
   </footer>
   </div>
 </body>
