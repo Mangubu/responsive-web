@@ -198,3 +198,19 @@ footer
     p
       font-size: (10rem/16)
       color: #8c8c8c
+
+.side-panel
+  position: absolute
+  z-index: 10
+  top: 0
+  left: -64%
+  width: 240px
+  height: 100%
+  background: #343434
+  color: #fff
+  text-align: center
+  -webkit-transition: all 400ms ease
+  transition: all 400ms ease
+
+.side-panel.visible
+  left: 0
