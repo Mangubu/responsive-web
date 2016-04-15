@@ -180,7 +180,9 @@ textarea { overflow: auto; }
   footer .footer-social a img { height: 26px; width: auto; }
   footer .footer-social a:last-child { margin-right: 0px; }
   footer .footer-ml { text-align: center; margin-top: 30px; margin-bottom: 80px; }
-  footer .footer-ml p { font-size: 0.625rem; color: #8c8c8c; } }
+  footer .footer-ml p { font-size: 0.625rem; color: #8c8c8c; }
+  .side-panel { position: absolute; z-index: 10; top: 0; left: -64%; width: 240px; height: 100%; background: #343434; color: #fff; text-align: center; -webkit-transition: all 400ms ease; transition: all 400ms ease; }
+  .side-panel.visible { left: 0; } }
 @media only screen and (min-width: 768px) { header .top-head { padding: 17px 11px 11px 11px; height: auto; text-align: center; position: relative; border-bottom: 1px solid #e4e3e2; }
   header .top-head .icon-bruger { height: 20px; float: left; }
   header .top-head .icon-logo { width: 10rem; }
@@ -224,7 +226,7 @@ textarea { overflow: auto; }
   .mosaique .mosaique-element:nth-of-type(4) p { margin: 0; }
   .mosaique .mosaique-element:nth-of-type(4) img { width: 100%; display: block; }
   .mosaique .mosaique-button { text-align: center; padding: 0px 255px 20px 255px; }
-  .mosaique .mosaique-button a { text-decoration: none; background-color: #fefefe; border: 1px solid #262626; color: #262626; padding-top: 20px; padding-bottom: 20px; border-radius: 0px; margin-top: 25px; position: relative; margin-bottom: 20px; font-size: 1.0625rem; display: block; }
+  .mosaique .mosaique-button a { text-decoration: nonegrunt; background-color: #fefefe; border: 1px solid #262626; color: #262626; padding-top: 20px; padding-bottom: 20px; border-radius: 0px; margin-top: 25px; position: relative; margin-bottom: 20px; font-size: 1.0625rem; display: block; }
   .mosaique .mosaique-button a img { width: 15px; position: absolute; right: 20px; top: 50%; transform: translateY(-50%); }
   footer { margin-top: 45px; }
   footer .footer-hastag { text-align: center; margin-bottom: 47px; }
@@ -235,6 +237,6 @@ textarea { overflow: auto; }
   footer .footer-social a img { height: 35px; width: auto; }
   footer .footer-social a:last-child { margin-right: 0px; }
   footer .footer-ml { text-align: center; margin-top: 30px; margin-bottom: 80px; }
-  footer .footer-ml p { font-size: 0.8125rem; color: #8c8c8c; } }
+  footer .footer-ml p { font-size: 13 rem/16; color: #8c8c8c; } }
 
 /*# sourceMappingURL=style.css.map */

@@ -200,6 +200,22 @@
         font-size: (10rem/16)
         color: #8c8c8c
 
+  .side-panel
+    position: absolute
+    z-index: 10
+    top: 0
+    left: -64%
+    width: 240px
+    height: 100%
+    background: #343434
+    color: #fff
+    text-align: center
+    -webkit-transition: all 400ms ease
+    transition: all 400ms ease
+
+  .side-panel.visible
+    left: 0
+
 @media only screen and (min-width: 768px)
   header
     .top-head
@@ -353,7 +369,7 @@
       text-align: center
       padding: 0px 255px 20px 255px
       a
-        text-decoration: none
+        text-decoration: nonegrunt
         background-color: #fefefe
         border: 1px solid #262626
         color: #262626
@@ -401,3 +417,5 @@
       p
         font-size: (13  rem/16)
         color: #8c8c8c
+
+
