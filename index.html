@@ -7,14 +7,33 @@
   <link rel="stylesheet" href="asset/compile/css/style.css">
 </head>
 <body>
-  <div id="side" class="side-panel">
-    <h2>Menu</h2>
-  </div>
   <header>
-    <div class="top-head">
+    <div id="side" class="side-panel">
+      <ul>
+        <li><a href="#">BEAUTÉ</a></li>
+        <li><a href="#">COIFFURE</a></li>
+        <li><a href="#">MASSAGE ET SPA</a></li>
+        <li><a href="#">FORME ET MINCEUR<a></li>
+        <li class="telechargement"><a href="#">TELECHARGER
+          <img src="asset/compile/img/social/app_store.png"/>
+        </a></li>
+        <li><a href="#">me connecter</a></li>
+      </ul>
+    </div>
+    <div id="head" class="top-head">
       <img alt="Lorem pixum" id="burger" class="icon-bruger" src="asset/compile/img/header/mobile/icon_burger.png"/>
+      <img alt="Lorem pixum" id="cross" class="icon-cross" src="asset/compile/img/header/mobile/cross.png"/>
       <img alt="Lorem pixum" class="icon-logo" src="asset/compile/img/logo/logo.png"/>
-      <img alt="Lorem pixum" class="icon-search " src="asset/compile/img/header/mobile/icon_search.png"/>
+      <img alt="Lorem pixum" id="cross2" class="icon-cross2" src="asset/compile/img/header/mobile/cross.png"/>
+      <img alt="Lorem pixum" id="search" class="icon-search " src="asset/compile/img/header/mobile/icon_search.png"/>
+      <div id="head-search" class="head-search">
+        <form method="post" action="#">
+          <input type="text" id="rechercher" placeholder="Rechercher..." />
+          <button type="submit">
+            <img alt="Lorem pixum" src="asset/compile/img/header/icon_search.png"/>
+          </button>
+        </fom>
+      </div>
     </div>
     <div class="banner">
       <div class="banner-background">
@@ -26,7 +45,7 @@
         </div>
       </div>
       <div class="banner-head-reservation">
-        <form  method="POST">
+        <form  method="POST" action="#">
           <ul>
             <li>
               <label for="reserv">
@@ -44,7 +63,7 @@
               <label for="calendar">
                 <img alt="Lorem pixum" src="asset/compile/img/header/icone_calendar.png"/>
               </label>
-              <input type="date" id="calendar" placeholder="Toutes les actus" />
+              <input type="text" id="calendar" placeholder="Toutes les actus" />
             </li>
           </ul>
           <div class="banner-head-reservation-submit">

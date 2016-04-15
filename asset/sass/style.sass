@@ -1,220 +1,303 @@
 @import '../css/normalize.scss'
+input
+  &:focus
+    outline: none
 
-@media only screen and (min-width : 320px)
-  header
-    .top-head
-      padding: 17px 11px 11px 11px
-      height: auto
-      text-align: center
-      position: relative
-      border-bottom: 1px solid #e4e3e2
+
+
+header
+  .top-head
+    padding: 17px 0px 0px 0px
+    height: auto
+    text-align: center
+    position: fixed
+    left: 0
+    top: 0
+    width: 100%
+    background-color: #FFFFFF
+    z-index: 999999
+    border-bottom: 1px solid #e4e3e2
+    &.visible
       .icon-bruger
-        height: 20px
-        float: left
-      .icon-logo
-        width: 10rem
-      .icon-search
-        height: 22px
-        float: right
-    .banner
-      .banner-background
-        position: relative
-        img
-          width: 100%
-          display: block
-        .banner-head-text
-          padding-right: 15px
-          margin: 0
-          width: 165px
-          text-align: right
-          transform: translateY(-50%)
-          position: absolute
-          top: 50%
-          right: 0
-          font-size: (11em/16)
-          font-family: Arial
-      .banner-head-reservation
-        ul
-          list-style-type: none
-          margin: 0
-          padding: 0
-          li
-            font-family: Arial
-            padding: 18px 20px 18px 20px
-            height: 22px
-            border-bottom: 1px solid #dbdbdb
-            input
-              border: 0px
-              width: 80%
-          li:first-child
-            border-top: 1px solid #dbdbdb
-        .banner-head-reservation-submit
-          background-color: #c4c4c4
-          text-align: center
-          height: auto
-          padding: 12px 0px 12px 0px
-          input[type=submit]
-            background-color: #262626
-            border: 0px
-            color: #FFFFFF
-            width: 94%
-            height: 50px
-            border-radius: 0px
-
-  input::-webkit-input-placeholder
-    color: #929292
-  input:-moz-placeholder
-    color: #929292
-    opacity: 1
-  input::-moz-placeholder
-    color: #929292
-    opacity: 1
-  input:-ms-input-placeholder
-    color: #929292
-
-
-  .promesse
-    padding: 25px 20px 0px 20px
-    &::after
-      content: ""
-      display: table
-      clear: both
-    .promesse-element
-      width: 50%
+        display: none
+      .icon-cross
+        display: block
+    .icon-bruger,
+    .icon-cross
+      height: 20px
       float: left
-      font-size: (11rem/16)
+      margin-left: 11px
+      padding-bottom: 11px
+    .icon-cross
+      display: none
+    .icon-search,
+    .icon-cross2
+      height: 20px
+      float: right
+      margin-right: 11px
+    .icon-cross2
+      display: none
+    .icon-logo
+      width: 10rem
+    .head-search
+      overflow: hidden
+      height: 0px
+      display: block
+      text-align: center
+      font-family: Arial
+      position: relative
+      -webkit-transition: all 400ms ease
+      transition: all 400ms ease
+      width: 100%
+      border-top: 0px solid #e4e3e2
+      input
+        text-align: center
+        width: 80%
+        font-family: Arial
+        padding: 18px 40px 18px 24px
+        height: 22px
+        border: 0
+        &:focus
+          outline: none
+      button
+        position: absolute
+        top: 14px
+        right: 6px
+        border: 0
+        background-color: transparent
+        img
+          width: 25px
+    &.show
+      .icon-search
+        display: none
+      .icon-cross2
+        display: block
+    .head-search.display
+      border-top: 1px solid #e4e3e2
+      height: 58px
+      -webkit-transition: all 400ms ease
+      transition: all 400ms ease
+  .banner
+    margin-top: 50px
+    .banner-background
+      position: relative
+      img
+        width: 100%
+        display: block
+      .banner-head-text
+        padding-right: 15px
+        margin: 0
+        width: 165px
+        text-align: right
+        transform: translateY(-50%)
+        position: absolute
+        top: 50%
+        right: 0
+        font-size: (11em/16)
+        font-family: Arial
+    .banner-head-reservation
+      ul
+        list-style-type: none
+        margin: 0
+        padding: 0
+        li
+          font-family: Arial
+          padding: 18px 20px 18px 20px
+          height: 22px
+          border-bottom: 1px solid #dbdbdb
+          input
+            border: 0px
+            width: 80%
+        li:first-child
+          border-top: 1px solid #dbdbdb
+      .banner-head-reservation-submit
+        background-color: #c4c4c4
+        text-align: center
+        height: auto
+        padding: 12px 0px 12px 0px
+        input[type=submit]
+          background-color: #262626
+          border: 0px
+          color: #FFFFFF
+          width: 94%
+          height: 50px
+          border-radius: 0px
+
+input::-webkit-input-placeholder
+  color: #929292
+input:-moz-placeholder
+  color: #929292
+  opacity: 1
+input::-moz-placeholder
+  color: #929292
+  opacity: 1
+input:-ms-input-placeholder
+  color: #929292
+
+
+.promesse
+  padding: 25px 20px 0px 20px
+  &::after
+    content: ""
+    display: table
+    clear: both
+  .promesse-element
+    width: 50%
+    float: left
+    font-size: (11rem/16)
+    position: relative
+    margin-bottom: 20px
+    img
+      position: absolute
+      top: 2px
+      height: 13px
+      width: auto
+    .promesse-element-text
+      padding-left: 22px
+      span
+        display: block
+      .num
+        font-size: (18rem/16)
+        color:  #cb9b2b
+      .type
+        color: #cb9b2b
+      .desc
+        color: #aaaaaa
+    &:nth-of-type(2n+1)
+      clear: left
+    &:nth-of-type(2n)
+      float: right!important
+
+.mosaique
+  background-color: #F7F7F7
+  .mosaique-title
+    text-align: center
+    padding: 30px 12px 30px 12px
+    background-color: #F7F7F7
+    p
+      font-size: 1em
+      margin: 0
+      .title-colored
+        color: #cb9b2b
+  .mosaique-element
+    margin-bottom: 15px
+    .mosaique-element-img
+      img
+        width: 100%
+        display: block
+        margin-bottom: 7px
+    .mosaique-element-detail
+      font-size: (12rem/16)
+      p
+        margin: 0
+        margin-left: 5px
+      .price
+        font-style: italic
+        color: #cb9b2b
+    &:nth-of-type(3)
+      margin-right: 4%
+      width: 48%
+      float: left
+      img
+        width: 100%
+        display: block
+    &:nth-of-type(4)
+      width: 48%
+      float: left
+      p
+        margin: 0
+      img
+        width: 100%
+        display: block
+  .mosaique-button
+    text-align: center
+    padding: 0px 10px 20px 10px
+    a
+      text-decoration: none
+      background-color: #fefefe
+      border: 1px solid #262626
+      color: #262626
+      padding-top: 20px
+      padding-bottom: 20px
+      border-radius: 0px
+      margin-top: 25px
       position: relative
       margin-bottom: 20px
+      font-size: (13rem/16)
+      display: block
+      img
+        width: 15px
+        position: absolute
+        right: 38px
+        top: 50%
+        transform: translateY(-50%)
+
+footer
+  margin-top: 45px
+  .footer-hastag
+    text-align: center
+    margin-bottom: 47px
+    p
+      font-size: (24em/16)
+      a
+        text-decoration: none
+        color: #cb9b2b
+  .footer-social
+    text-align: center
+    padding-bottom: 39px
+    border-bottom: 1px solid #e4e3e2
+    a
+      margin-right: 38px
+      text-decoration: none
+      img
+        height: 26px
+        width: auto
+      &:last-child
+        margin-right: 0px
+  .footer-ml
+    text-align: center
+    margin-top: 30px
+    margin-bottom: 80px
+    p
+      font-size: (10rem/16)
+      color: #8c8c8c
+.side-panel
+  margin-top: 49px
+  position: fixed
+  z-index: 10
+  top: 0
+  left: -100%
+  width: 150px
+  height: 100%
+  background: #FFFFFF
+  color: #000000
+  text-align: center
+  -webkit-transition: all 400ms ease
+  transition: all 400ms ease
+  ul
+    height: calc(100vh - 49px)
+    margin: 0
+    padding: 0 0 30px 0
+    list-style: none
+    li
+      padding: 15px 5px 15px 5px
+      border-bottom: 1px solid #e4e3e2
+      font-size: (10rem/16)
+      text-align: left
+      text-transform: uppercase
+      position: relative
+      a
+        text-decoration: none
+        color: #cb9b2b
       img
         position: absolute
-        top: 2px
-        height: 13px
-        width: auto
-      .promesse-element-text
-        padding-left: 22px
-        span
-          display: block
-        .num
-          font-size: (18rem/16)
-          color:  #cb9b2b
-        .type
-          color: #cb9b2b
-        .desc
-          color: #aaaaaa
-      &:nth-of-type(2n+1)
-        clear: left
-      &:nth-of-type(2n)
-        float: right!important
-
-  .mosaique
-    background-color: #F7F7F7
-    .mosaique-title
-      text-align: center
-      padding: 30px 12px 30px 12px
-      background-color: #F7F7F7
-      p
-        font-size: 1em
-        margin: 0
-        .title-colored
-          color: #cb9b2b
-    .mosaique-element
-      margin-bottom: 15px
-      .mosaique-element-img
-        img
-          width: 100%
-          display: block
-          margin-bottom: 7px
-      .mosaique-element-detail
-        font-size: (12rem/16)
-        p
-          margin: 0
-          margin-left: 5px
-        .price
-          font-style: italic
-          color: #cb9b2b
-      &:nth-of-type(3)
-        margin-right: 4%
-        width: 48%
-        float: left
-        img
-          width: 100%
-          display: block
-      &:nth-of-type(4)
-        width: 48%
-        float: left
-        p
-          margin: 0
-        img
-          width: 100%
-          display: block
-    .mosaique-button
-      text-align: center
-      padding: 0px 10px 20px 10px
-      a
-        text-decoration: none
-        background-color: #fefefe
-        border: 1px solid #262626
-        color: #262626
-        padding-top: 20px
-        padding-bottom: 20px
-        border-radius: 0px
-        margin-top: 25px
-        position: relative
-        margin-bottom: 20px
-        font-size: (13rem/16)
-        display: block
-        img
-          width: 15px
-          position: absolute
-          right: 38px
-          top: 50%
-          transform: translateY(-50%)
-
-  footer
-    margin-top: 45px
-    .footer-hastag
-      text-align: center
-      margin-bottom: 47px
-      p
-        font-size: (24em/16)
-        a
-          text-decoration: none
-          color: #cb9b2b
-    .footer-social
-      text-align: center
-      padding-bottom: 39px
-      border-bottom: 1px solid #e4e3e2
-      a
-        margin-right: 38px
-        text-decoration: none
-        img
-          height: 26px
-          width: auto
-        &:last-child
-          margin-right: 0px
-    .footer-ml
-      text-align: center
-      margin-top: 30px
-      margin-bottom: 80px
-      p
-        font-size: (10rem/16)
-        color: #8c8c8c
-
-  .side-panel
-    position: absolute
-    z-index: 10
-    top: 0
-    left: -64%
-    width: 240px
-    height: 100%
-    background: #343434
-    color: #fff
-    text-align: center
-    -webkit-transition: all 400ms ease
-    transition: all 400ms ease
-
-  .side-panel.visible
-    left: 0
+    .telechargement
+      img
+        width: 62px
+        top: 10px
+        right: 5px
+.side-panel.visible
+  left: 0
 
 @media only screen and (min-width: 768px)
   header
@@ -417,5 +500,23 @@
       p
         font-size: (13  rem/16)
         color: #8c8c8c
+  .side-panel
+    position: absolute
+    z-index: 10
+    top: 0
+    left: -80%
+    width: 300px
+    height: 100%
+    background: #FFFFFF
+    color: #000000
+    text-align: center
+    -webkit-transition: all 400ms ease
+    transition: all 400ms ease
+    padding: 15px 0 15px 15px
+    img
+      float: right
+      height: 20px
+      margin: 0 15px 0 0
 
-
+  .side-panel.visible
+    left: 0
