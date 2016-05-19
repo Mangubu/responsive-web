@@ -128,6 +128,7 @@ textarea { overflow: auto; }
 
 input:focus { outline: none; }
 
+header .desktop-top-head { display: none; }
 header .top-head { padding: 17px 0px 0px 0px; height: auto; text-align: center; position: fixed; left: 0; top: 0; width: 100%; background-color: #FFFFFF; z-index: 999999; border-bottom: 1px solid #e4e3e2; }
 header .top-head.visible .icon-bruger { display: none; }
 header .top-head.visible .icon-cross { display: block; }
@@ -146,12 +147,15 @@ header .top-head.show .icon-cross2 { display: block; }
 header .top-head .head-search.display { border-top: 1px solid #e4e3e2; height: 58px; -webkit-transition: all 400ms ease; transition: all 400ms ease; }
 header .banner { margin-top: 50px; }
 header .banner .banner-background { position: relative; }
+header .banner .banner-background .banner-head-logo { display: none; }
 header .banner .banner-background img { width: 100%; display: block; }
 header .banner .banner-background .banner-head-text { padding-right: 15px; margin: 0; width: 165px; text-align: right; transform: translateY(-50%); position: absolute; top: 50%; right: 0; font-size: 0.6875em; font-family: Arial; }
 header .banner .banner-head-reservation ul { list-style-type: none; margin: 0; padding: 0; }
 header .banner .banner-head-reservation ul li { font-family: Arial; padding: 18px 20px 18px 20px; height: 22px; border-bottom: 1px solid #dbdbdb; }
+header .banner .banner-head-reservation ul li img { height: 15px; }
 header .banner .banner-head-reservation ul li input { border: 0px; width: 80%; }
 header .banner .banner-head-reservation ul li:first-child { border-top: 1px solid #dbdbdb; }
+header .banner .banner-head-reservation ul li:last-child { padding: 0; }
 header .banner .banner-head-reservation .banner-head-reservation-submit { background-color: #c4c4c4; text-align: center; height: auto; padding: 12px 0px 12px 0px; }
 header .banner .banner-head-reservation .banner-head-reservation-submit input[type=submit] { background-color: #262626; border: 0px; color: #FFFFFF; width: 94%; height: 50px; border-radius: 0px; }
 
@@ -163,7 +167,7 @@ input::-moz-placeholder { color: #929292; opacity: 1; }
 
 input:-ms-input-placeholder { color: #929292; }
 
-.promesse { padding: 25px 20px 0px 20px; }
+.promesse { padding: 75px 20px 0px 20px; }
 .promesse::after { content: ""; display: table; clear: both; }
 .promesse .promesse-element { width: 50%; float: left; font-size: 0.6875rem; position: relative; margin-bottom: 20px; }
 .promesse .promesse-element img { position: absolute; top: 2px; height: 13px; width: auto; }
@@ -174,6 +178,14 @@ input:-ms-input-placeholder { color: #929292; }
 .promesse .promesse-element .promesse-element-text .desc { color: #aaaaaa; }
 .promesse .promesse-element:nth-of-type(2n+1) { clear: left; }
 .promesse .promesse-element:nth-of-type(2n) { float: right !important; }
+
+.brand { display: none; }
+
+.avis { display: none; }
+
+.reservation { display: none; }
+
+.award { display: none; }
 
 .mosaique { background-color: #F7F7F7; }
 .mosaique .mosaique-title { text-align: center; padding: 30px 12px 30px 12px; background-color: #F7F7F7; }
@@ -209,67 +221,164 @@ footer .footer-ml p { font-size: 0.625rem; color: #8c8c8c; }
 .side-panel ul li { padding: 15px 5px 15px 5px; border-bottom: 1px solid #e4e3e2; font-size: 0.625rem; text-align: left; text-transform: uppercase; position: relative; }
 .side-panel ul li a { text-decoration: none; color: #cb9b2b; }
 .side-panel ul li img { position: absolute; }
-.side-panel ul .telechargement img { width: 62px; top: 10px; right: 5px; }
+.side-panel ul .telechargement img { width: 55px; top: 21px; right: 8px; }
 
 .side-panel.visible { left: 0; }
 
-@media only screen and (min-width: 768px) { header .top-head { padding: 17px 11px 11px 11px; height: auto; text-align: center; position: relative; border-bottom: 1px solid #e4e3e2; }
-  header .top-head .icon-bruger { height: 20px; float: left; }
-  header .top-head .icon-logo { width: 10rem; }
-  header .top-head .icon-search { height: 22px; float: right; }
-  header .banner .banner-background { position: relative; }
-  header .banner .banner-background img { width: 100%; display: block; }
-  header .banner .banner-background .banner-head-text { padding-right: 15px; margin: 0; width: 165px; text-align: right; transform: translateY(-50%); position: absolute; top: 50%; right: 0; font-size: 0.6875em; font-family: Arial; }
-  header .banner .banner-head-reservation ul { list-style-type: none; margin: 0; padding: 0; }
-  header .banner .banner-head-reservation ul li { font-family: Arial; padding: 18px 20px 18px 20px; height: 22px; border-bottom: 1px solid #dbdbdb; }
-  header .banner .banner-head-reservation ul li input { border: 0px; width: 80%; }
-  header .banner .banner-head-reservation ul li:first-child { border-top: 1px solid #dbdbdb; }
-  header .banner .banner-head-reservation .banner-head-reservation-submit { background-color: #c4c4c4; text-align: center; height: auto; padding: 12px 0px 12px 0px; }
-  header .banner .banner-head-reservation .banner-head-reservation-submit input[type=submit] { background-color: #262626; border: 0px; color: #FFFFFF; width: 35%; height: 50px; border-radius: 0px; }
-  input::-webkit-input-placeholder { color: #929292; }
-  input:-moz-placeholder { color: #929292; opacity: 1; }
-  input::-moz-placeholder { color: #929292; opacity: 1; }
-  input:-ms-input-placeholder { color: #929292; }
-  .promesse { padding: 25px 20px 0px 20px; }
-  .promesse::after { content: ""; display: table; clear: both; }
-  .promesse .promesse-element { width: 50%; float: left; font-size: 0.6875rem; position: relative; margin-bottom: 20px; }
-  .promesse .promesse-element img { position: absolute; top: 2px; height: 20px; width: auto; }
+@media only screen and (min-width: 768px) { header .banner .banner-head-reservation { border-top: 1px solid #dbdbdb; }
+  header .banner .banner-head-reservation ul li img { height: 20px; }
+  header .banner .banner-head-reservation ul li input { font-size: 1.0625em; }
+  header .banner .banner-background .banner-head-text { font-size: 1.25em; font-family: Arial; width: 300px; }
+  header .banner .banner-head-reservation input { border: 0px; width: 80%; }
+  header .banner .banner-head-reservation .banner-head-reservation-submit input[type=submit] { width: 35%; }
+  .promesse .promesse-element img { height: 20px; }
   .promesse .promesse-element .promesse-element-text { padding-left: 40px; }
-  .promesse .promesse-element .promesse-element-text span { display: block; }
-  .promesse .promesse-element .promesse-element-text .num { font-size: 1.375rem; color: #cb9b2b; }
-  .promesse .promesse-element .promesse-element-text .type { color: #cb9b2b; font-size: 1.125rem; }
-  .promesse .promesse-element .promesse-element-text .desc { font-size: 1.125rem; color: #aaaaaa; }
-  .promesse .promesse-element:nth-of-type(2n+1) { clear: left; }
-  .promesse .promesse-element:nth-of-type(2n) { float: right !important; }
-  .mosaique { background-color: #F7F7F7; }
-  .mosaique .mosaique-title { text-align: center; padding: 30px 12px 30px 12px; background-color: #F7F7F7; }
-  .mosaique .mosaique-title p { font-size: 1.375rem; margin: 0; }
-  .mosaique .mosaique-title p .title-colored { color: #cb9b2b; }
-  .mosaique .mosaique-element { margin-bottom: 15px; }
-  .mosaique .mosaique-element .mosaique-element-img img { width: 100%; display: block; margin-bottom: 7px; }
-  .mosaique .mosaique-element .mosaique-element-detail { font-size: 0.875rem; }
-  .mosaique .mosaique-element .mosaique-element-detail p { margin: 0; margin-left: 5px; }
-  .mosaique .mosaique-element .mosaique-element-detail .price { font-style: italic; color: #cb9b2b; }
-  .mosaique .mosaique-element:nth-of-type(3) { margin-right: 4%; width: 48%; float: left; }
-  .mosaique .mosaique-element:nth-of-type(3) img { width: 100%; display: block; }
-  .mosaique .mosaique-element:nth-of-type(4) { width: 48%; float: left; }
-  .mosaique .mosaique-element:nth-of-type(4) p { margin: 0; }
-  .mosaique .mosaique-element:nth-of-type(4) img { width: 100%; display: block; }
-  .mosaique .mosaique-button { text-align: center; padding: 0px 255px 20px 255px; }
-  .mosaique .mosaique-button a { text-decoration: nonegrunt; background-color: #fefefe; border: 1px solid #262626; color: #262626; padding-top: 20px; padding-bottom: 20px; border-radius: 0px; margin-top: 25px; position: relative; margin-bottom: 20px; font-size: 1.0625rem; display: block; }
-  .mosaique .mosaique-button a img { width: 15px; position: absolute; right: 20px; top: 50%; transform: translateY(-50%); }
-  footer { margin-top: 45px; }
-  footer .footer-hastag { text-align: center; margin-bottom: 47px; }
+  .promesse .promesse-element .promesse-element-text .num { font-size: 1.375rem; }
+  .promesse .promesse-element .promesse-element-text .type { font-size: 1.125rem; }
+  .promesse .promesse-element .promesse-element-text .desc { font-size: 1.125rem; }
+  .mosaique .mosaique-title p { font-size: 1.375rem; }
+  .mosaique .mosaique-element .mosaique-element-detail { font-size: 0.9375rem; }
+  .mosaique .mosaique-button { padding: 0px 255px 20px 255px; }
+  .mosaique .mosaique-button a { font-size: 1.0625rem; }
   footer .footer-hastag p { font-size: 1.875em; }
-  footer .footer-hastag p a { text-decoration: none; color: #cb9b2b; }
-  footer .footer-social { text-align: center; padding-bottom: 39px; border-bottom: 1px solid #e4e3e2; }
-  footer .footer-social a { margin-right: 38px; text-decoration: none; }
-  footer .footer-social a img { height: 35px; width: auto; }
-  footer .footer-social a:last-child { margin-right: 0px; }
-  footer .footer-ml { text-align: center; margin-top: 30px; margin-bottom: 80px; }
-  footer .footer-ml p { font-size: 13 rem/16; color: #8c8c8c; }
-  .side-panel { position: absolute; z-index: 10; top: 0; left: -80%; width: 300px; height: 100%; background: #FFFFFF; color: #000000; text-align: center; -webkit-transition: all 400ms ease; transition: all 400ms ease; padding: 15px 0 15px 15px; }
-  .side-panel img { float: right; height: 20px; margin: 0 15px 0 0; }
+  footer .footer-social a { margin-right: 45px; }
+  footer .footer-social a img { height: 40px; }
+  footer .footer-ml p { font-size: 0.8125em; }
+  .side-panel { width: 300px; }
+  .side-panel ul li { padding: 25px 5px 25px 10px; }
+  .side-panel ul li p { margin: 0px; }
+  .side-panel ul li p a { font-size: 1.25em; }
+  .side-panel ul .telechargement img { width: 85px; top: 20px; right: 35px; }
   .side-panel.visible { left: 0; } }
+@media only screen and (min-width: 768px) { header .desktop-top-head { display: none; }
+  header .desktop-top-head p { font-size: 0.6875em; margin: 0; }
+  header .desktop-top-head p .sign-in { background-color: #262626; padding: 5px 10px 5px 10px; margin-left: 10px; color: #FFFFFF; }
+  header .desktop-top-head p .sign-in a { text-decoration: none; color: #FFFFFF; }
+  header .desktop-top-head p .sign-in a img { height: 10px; }
+  header .desktop-top-head p .right-element { float: right; }
+  header .desktop-top-head p .right-element .number { margin-right: 30px; }
+  header .desktop-top-head p .right-element .number img { height: 15px; margin-right: 5px; }
+  header .desktop-top-head p .right-element .download { margin-right: 35px; }
+  header .desktop-top-head p .right-element .download img { margin-left: 10px; }
+  header .desktop-top-head p .right-element a { text-decoration: none; color: #262626; }
+  header .top-head { display: none; }
+  header .banner { margin-top: 0px; }
+  header .banner .banner-head-reservation { border-top: 1px solid #dbdbdb; }
+  header .banner .banner-head-reservation ul li img { height: 20px; }
+  header .banner .banner-head-reservation ul li input { font-size: 1.0625em; }
+  header .banner .banner-background .banner-head-text { font-size: 1.25em; font-family: Arial; width: 300px; }
+  header .banner .banner-head-reservation input { border: 0px; width: 80%; }
+  header .banner .banner-head-reservation .banner-head-reservation-submit input[type=submit] { width: 35%; }
+  header .promesse .promesse-element img { height: 20px; }
+  header .promesse .promesse-element .promesse-element-text { padding-left: 40px; }
+  header .promesse .promesse-element .promesse-element-text .num { font-size: 1.375rem; }
+  header .promesse .promesse-element .promesse-element-text .type { font-size: 1.125rem; }
+  header .promesse .promesse-element .promesse-element-text .desc { font-size: 1.125rem; }
+  header .mosaique .mosaique-title p { font-size: 1.375rem; }
+  header .mosaique .mosaique-element .mosaique-element-detail { font-size: 0.9375rem; }
+  header .mosaique .mosaique-button { padding: 0px 255px 20px 255px; }
+  header .mosaique .mosaique-button a { font-size: 1.0625rem; }
+  header footer .footer-hastag p { font-size: 1.875em; }
+  header footer .footer-social a { margin-right: 45px; }
+  header footer .footer-social a img { height: 40px; }
+  header footer .footer-ml p { font-size: 0.8125em; }
+  header .side-panel { width: 300px; }
+  header .side-panel ul li { padding: 25px 5px 25px 10px; }
+  header .side-panel ul li p { margin: 0px; }
+  header .side-panel ul li p a { font-size: 1.25em; }
+  header .side-panel ul .telechargement img { width: 85px; top: 20px; right: 35px; }
+  header .side-panel.visible { left: 0; } }
+@media only screen and (min-width: 1280px) { header .desktop-top-head { display: block; padding: 15px 20px 15px 20px; }
+  header .side-panel { left: 0; width: 100%; background: transparent; position: absolute; top: 30px; }
+  header .side-panel ul { padding: 0; width: 100%; }
+  header .side-panel ul li { padding: 0; border-bottom: none; text-align: center; display: inline-block; }
+  header .side-panel ul li:nth-child(4) p { display: inline-flex; }
+  header .side-panel ul li:nth-child(4) p::after { content: ""; }
+  header .side-panel ul li:nth-child(5) { display: none; }
+  header .side-panel ul li:nth-child(6) { display: none; }
+  header .side-panel ul li:nth-child(7) { display: none; }
+  header .side-panel ul li p::after { content: "."; padding-left: 10px; padding-right: 10px; }
+  header .side-panel ul li p a { color: #4c4c4c; font-size: 1.25em; }
+  header .banner { margin-top: 0px; position: relative; }
+  header .banner .banner-background .banner-head-logo { width: 230px; position: absolute; top: 30px; left: 20px; }
+  header .banner .banner-background .banner-head-text { padding-right: 34%; margin: 0; width: 165px; text-align: right; position: absolute; top: 50%; right: 0; font-family: Arial; font-size: 1.875em; width: 500px; }
+  header .banner .banner-head-reservation { border-top: none; position: absolute; width: 100%; top: 560px; text-align: center; background-color: rgba(0, 0, 0, 0.5); }
+  header .banner .banner-head-reservation ul { display: inline-block; margin: 30px 170px 30px 170px; width: 900px; }
+  header .banner .banner-head-reservation ul li { display: inline-block; float: left; padding: 0; padding: 13px 10px 13px 10px; border-right: 1px solid #f7f7f7; background: #FFFFFF; }
+  header .banner .banner-head-reservation ul li:first-child { border-top: 0px; }
+  header .banner .banner-head-reservation ul li:last-child { padding: 0px; border-right: 0px solid grey; background-color: transparent; margin-left: 10px; }
+  header .banner .banner-head-reservation ul li .banner-head-reservation-submit { background-color: transparent; float: left; padding: 0px; }
+  header .banner .banner-head-reservation ul li .banner-head-reservation-submit input[type=submit] { width: 180px; }
+  .promesse { background-color: #262626; padding: 25px 170px 0px 170px; }
+  .promesse::after { content: ""; clear: both; }
+  .promesse .promesse-element { width: 25%; font-size: 0.6875rem; position: relative; margin-bottom: 20px; float: left; }
+  .promesse .promesse-element:nth-of-type(2n+1) { clear: none; }
+  .mosaique { background-color: #F7F7F7; padding: 0px 165px 0px 165px; }
+  .mosaique .mosaique-title { text-align: center; padding: 100px 0px 70px 0px; background-color: #F7F7F7; }
+  .mosaique .mosaique-title p { font-size: 3rem; font-weight: 100; margin: 0; }
+  .mosaique .mosaique-title p .title-colored { color: #cb9b2b; }
+  .mosaique .mosaique-button a { background-color: #262626; border: 1px solid #fefefe; color: #fefefe; padding-top: 20px; padding-bottom: 20px; border-radius: 0px; margin-top: 25px; position: relative; margin-bottom: 20px; font-size: 0.8125rem; display: block; }
+  .avis .avis-title { text-align: center; padding: 100px 0px 70px 0px; background-color: #fefefe; }
+  .avis .avis-title p { font-size: 3rem; font-weight: 100; margin: 0; }
+  .avis .avis-title p .title-colored { color: #cb9b2b; }
+  .reservation { background-color: #262626; }
+  .reservation .reservation-title { text-align: center; padding: 100px 305px 70px 305px; }
+  .reservation .reservation-title p { font-size: 3rem; font-weight: 100; margin: 0; color: #ffffff; }
+  .reservation .reservation-title p .title-colored { color: #cb9b2b; }
+  .reservation .ville { padding: 0px 268px 70px 269px; }
+  .reservation .ville ul { width: 26%; display: inline-block; padding: 0; clear: both; margin-right: 82px; }
+  .reservation .ville ul:last-child { margin-right: 0px; }
+  .reservation .ville ul li { list-style: none; margin-bottom: 30px; font-size: 1.125rem; color: #ffffff; }
+  .reservation .ville ul li:hover { color: #cb9b2b; cursor: pointer; }
+  .reservation .ville ul li:last-child { margin-bottom: 0px; }
+  .award { background-color: #fefefe; }
+  .award .award-title { text-align: center; padding: 100px 305px 70px 305px; }
+  .award .award-title p { font-size: 3rem; font-weight: 100; margin: 0; color: #262626; }
+  .award .award-title p .title-colored { color: #cb9b2b; }
+  .award .awar-column { width: 100%; padding: 0 165px 50px 165px; clear: both; }
+  .award .awar-column .column1 { width: 22%; float: left; }
+  .award .awar-column .column2 { width: 28%; float: left; margin-right: 35px; }
+  .award .awar-column .column2 .first-letter { color: #cb9b2b; padding: 0px 15px 0px 0px; font-size: 5.125rem; display: inline-block; margin-top: -15px; float: left; }
+  .award .awar-column .column2 .text { font-size: 0.75rem; clear: both; }
+  .award .awar-column .column3 { width: 24%; float: left; }
+  .award .awar-column .column3 .text { font-size: 0.75rem; clear: both; }
+  .brand { background-color: #FFFFFF; padding: 35px 170px 45px 170px; text-align: center; }
+  .brand::after { content: ""; clear: both; }
+  .brand .brand-element { background-color: #FFFFFF; width: 14%; font-size: 0.6875rem; position: relative; margin-bottom: 20px; float: left; }
+  .brand .brand-element p { font-size: 1.0625rem; font-weight: 100; margin: 0; color: #262626; }
+  .brand .brand-element p .title-colored { color: #cb9b2b; }
+  .avis { padding: 0px 165px 0px 165px; text-align: center; }
+  .avis ul { list-style: none; padding: 0px; text-align: left; }
+  .avis ul li { padding: 0px 40px 90px 0px; display: inline-block; width: 29%; }
+  .avis ul li .avis-nom { font-size: 0.8125rem; padding-left: 20px; }
+  .avis ul li .avis-lieu { font-size: 0.8125rem; padding-left: 20px; color: #929292; }
+  .avis ul li .avis-rater-container { border-left: 2px solid #cb9b2b; padding-left: 15px; margin-top: 20px; }
+  .avis ul li .avis-rater-container .avis-rater { font-size: 1.125rem; }
+  .avis ul li .avis-rater-container .avis-date { font-size: 0.6875rem; }
+  .avis ul li .avis-rater-container .avis-rate { font-size: 1.125rem; color: #cb9b2b; }
+  .avis ul li .avis-testimony { font-size: 0.8125rem; padding-left: 20px; }
+  .brand { display: block; }
+  .avis { display: block; }
+  .reservation { display: block; }
+  .award { display: block; }
+  footer { background-color: #f7f7f7; margin-top: 190px; }
+  footer .footer-menu .menu { width: 58%; float: left; background-color: #f7f7f7; padding: 50px 0px 50px 165px; }
+  footer .footer-menu .menu ul { float: left; margin: auto; }
+  footer .footer-menu .menu ul:first-child { margin-right: 80px; }
+  footer .footer-menu .menu ul:last-child { padding-left: 80px; }
+  footer .footer-menu .menu ul:last-child li { list-style: none; padding: 2px 0px 2px 0px; }
+  footer .footer-menu .menu ul:last-child li:first-child { padding: 15px 15px 29px 0px; font-size: 1.3125rem; }
+  footer .footer-menu .menu ul li { list-style: none; font-size: 0.8125rem; padding: 2px 0px 2px 0px; }
+  footer .footer-menu .menu ul li:first-child { padding: 10px 10px 10px 0px; color: #cb9b2b; font-size: 1.3125rem; }
+  footer .footer-menu .social { width: 30%; float: left; padding: 50px 0px 29px 0px; background-color: #f7f7f7; }
+  footer .footer-menu .social ul { padding: 0px; color: #cb9b2b; }
+  footer .footer-menu .social ul li { list-style: none; padding: 7px 0px 7px 0px; }
+  footer .footer-menu .social ul li:first-child { color: #cb9b2b; }
+  footer .footer-menu .social ul .footer-social { padding-bottom: 0px; border-bottom: 0px solid #e4e3e2; text-align: left; }
+  footer .footer-menu .social ul .footer-social a { margin-right: 20px; text-decoration: none; outline: 0; }
+  footer .footer-menu .social ul .footer-social a img { height: 15px; text-decoration: none; }
+  footer .footer-ml { display: none; }
+  footer .footer-hastag { display: none; }
+  footer .footer-social { display: none; } }
 
 /*# sourceMappingURL=style.css.map */

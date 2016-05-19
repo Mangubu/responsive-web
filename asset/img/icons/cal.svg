@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="23" height="23" viewBox="0 0 23 23">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #cb9b2b;
+        fill-rule: evenodd;
+      }
+    </style>
+  </defs>
+  <path id="Calendar_Icon_copy" data-name="Calendar Icon copy" class="cls-1" d="M333,1054H310v-16.61a2.321,2.321,0,0,0,0-1.28V1033h2v-2h3.111L315,1033h3l-0.333-2h2.555L320,1033h3l-0.222-2h2.556L325,1033h3l-0.111-2H331v2h2v3.11a2.321,2.321,0,0,0,0,1.28V1054Zm-2-18H312v16h19v-16Zm-13.333,7.78h-2.556v-2.56h2.556v2.56Zm0,5.11h-2.556v-2.56h2.556v2.56Zm5.111-5.11h-2.556v-2.56h2.556v2.56Zm0,5.11h-2.556v-2.56h2.556v2.56Zm5.111-5.11h-2.555v-2.56h2.555v2.56Z" transform="translate(-310 -1031)"/>
+</svg>

@@ -8,37 +8,74 @@
 </head>
 <body>
   <header>
+    <div class="desktop-top-head">
+      <p>
+        Vous gérez un salon ? <span class="sign-in"><a href="#">Inscrivez-vous <img src="asset/img/icons/right_arrow.svg"></a></span>
+        <span class="right-element">
+          <span class="number"><img src="asset/img/icons/phone.png">0 811 881 076</span>
+          <a class="download" href="#">Télécharger l’appli <img src="asset/img/icons/mobile.png"/><img src="asset/img/icons/gplay.png"/></a> <a href="#">Me connecter</a>
+        </span>
+      </p>
+    </div>
     <div id="side" class="side-panel">
       <ul>
-        <li><a href="#">BEAUTÉ</a></li>
-        <li><a href="#">COIFFURE</a></li>
-        <li><a href="#">MASSAGE ET SPA</a></li>
-        <li><a href="#">FORME ET MINCEUR<a></li>
-        <li class="telechargement"><a href="#">TELECHARGER
-          <img src="asset/compile/img/social/app_store.png"/>
-        </a></li>
-        <li><a href="#">me connecter</a></li>
+        <li>
+          <p>
+            <a href="#">BEAUTÉ</a>
+          </p>
+        </li>
+        <li>
+          <p>
+            <a href="#">COIFFURE</a>
+          </p>
+        </li>
+        <li>
+          <p>
+            <a href="#">MASSAGE ET SPA</a>
+          </p>
+        </li>
+        <li>
+          <p>
+            <a href="#">FORME ET MINCEUR<a>
+          </p>
+        </li>
+        <li class="telechargement">
+          <p>
+            <a href="#">TELECHARGER
+              <img src="asset/compile/img/social/app_store.png"/>
+            </a>
+          </p>
+        </li>
+        <li>
+          <p>
+            <a href="#">me connecter</a>
+          </p>
+        </li>
       </ul>
     </div>
     <div id="head" class="top-head">
-      <img alt="Lorem pixum" id="burger" class="icon-bruger" src="asset/compile/img/header/mobile/icon_burger.png"/>
-      <img alt="Lorem pixum" id="cross" class="icon-cross" src="asset/compile/img/header/mobile/cross.png"/>
+      <img alt="Lorem pixum" id="burger" class="icon-bruger" src="asset/img/icons/burger.svg"/>
       <img alt="Lorem pixum" class="icon-logo" src="asset/compile/img/logo/logo.png"/>
-      <img alt="Lorem pixum" id="cross2" class="icon-cross2" src="asset/compile/img/header/mobile/cross.png"/>
-      <img alt="Lorem pixum" id="search" class="icon-search " src="asset/compile/img/header/mobile/icon_search.png"/>
+      <img alt="Lorem pixum" id="cross2" class="icon-cross2" src="asset/img/icons/delete.svg"/>
+      <img alt="Lorem pixum" id="search" class="icon-search" src="asset/img/icons/search0.svg"/>
       <div id="head-search" class="head-search">
         <form method="post" action="#">
           <input type="text" id="rechercher" placeholder="Rechercher..." />
           <button type="submit">
-            <img alt="Lorem pixum" src="asset/compile/img/header/icon_search.png"/>
+            <img alt="Lorem pixum" src="asset/img/icons/search.svg"/>
           </button>
         </fom>
       </div>
     </div>
     <div class="banner">
       <div class="banner-background">
-        <img alt="Lorem pixum" src="asset/compile/img/photo/mobile/photo.png"/>
-        <div class="banner-head-menu"></div>
+        <picture>
+          <source alt="Lorem pixum" media="(min-width: 1280px)" srcset="asset/compile/img/photo/header_background.png">
+          <img alt="Lorem pixum" src="asset/compile/img/photo/mobile/photo.png"/>
+        </picture>
+        <div class="banner-head-logo">
+          <img alt="Lorem pixum" src="asset/compile/img/logo/logo.png"/>
+        </div>
         <div class="banner-head-text">
           Réservez instantanément dans les meilleurs salons de coiffure,
           instituts de beauté et Spas, jusqu’à -50%
@@ -49,33 +86,35 @@
           <ul>
             <li>
               <label for="reserv">
-                <img alt="Lorem pixum" src="asset/compile/img/header/icon_search.png"/>
+                <img alt="Lorem pixum" src="asset/img/icons/search.svg"/>
               </label>
               <input type="text" id="reserv" placeholder="Que souhaitez vous reserver ?" />
             </li>
             <li>
               <label for="locality">
-                <img alt="Lorem pixum" src="asset/compile/img/header/icon_where.png"/>
+                <img alt="Lorem pixum" src="asset/img/icons/pin.svg"/>
               </label>
               <input type="text" id="locality" placeholder="Ville, adresse, code postal, ..." />
             </li>
             <li>
               <label for="calendar">
-                <img alt="Lorem pixum" src="asset/compile/img/header/icone_calendar.png"/>
+                <img alt="Lorem pixum" src="asset/img/icons/cal.svg"/>
               </label>
               <input type="text" id="calendar" placeholder="Toutes les actus" />
             </li>
+            <li>
+              <div class="banner-head-reservation-submit">
+                <input type="submit" value="RECHERCHER"/>
+              </div>
+            </li>
           </ul>
-          <div class="banner-head-reservation-submit">
-            <input type="submit" value="RECHERCHER"/>
-          </div>
         </form>
       </div>
     </div>
   </header>
   <section class="promesse">
     <div class="promesse-element">
-      <img alt="Lorem pixum" src="asset/compile/img/promesse/icon_search_prom.png" />
+      <img alt="Lorem pixum" src="asset/img/icons/search.svg" />
       <div class="promesse-element-text">
         <span class="num">2 000</span>
         <span class="type">adresses</span>
@@ -85,7 +124,7 @@
       </div>
     </div>
     <div class="promesse-element">
-      <img alt="Lorem pixum" src="asset/img/promesse/icon_bulle_prom.png" />
+      <img alt="Lorem pixum" src="asset/img/icons/msg.svg" />
       <div class="promesse-element-text" >
         <span class="num">50 000</span>
         <span class="type">avis</span>
@@ -94,7 +133,7 @@
       </div>
     </div>
     <div class="promesse-element">
-      <img alt="Lorem pixum" src="asset/img/promesse/icon_label_prom.png" />
+      <img alt="Lorem pixum" src="asset/img/icons/label.svg" />
       <div class="promesse-element-text" >
         <span class="num">10 000</span>
         <span class="type">prestations</span>
@@ -103,7 +142,7 @@
       </div>
     </div>
     <div class="promesse-element">
-      <img alt="Lorem pixum" src="asset/img/promesse/icon_calendar_prom.png" />
+      <img alt="Lorem pixum" src="asset/img/icons/cal.svg" />
       <div class="promesse-element-text">
         <span class="num">100 000</span>
         <span class="type">rendez-vous</span>
@@ -113,13 +152,15 @@
     </div>
   </section>
   <section class="brand">
-    <div class="brand-element"></div>
-    <div class="brand-element"></div>
-    <div class="brand-element"></div>
-    <div class="brand-element"></div>
-    <div class="brand-element"></div>
-    <div class="brand-element"></div>
-    <div class="brand-element"></div>
+    <div class="brand-element">
+      <p>Ils parlent de <span class="title-colored">nous</span></p>
+    </div>
+    <div class="brand-element"><img alt="Lorem pixum" src="asset/img/marque/logo_Elle.png" /></div>
+    <div class="brand-element"><img alt="Lorem pixum" src="asset/img/marque/logo_Express.png" /></div>
+    <div class="brand-element"><img alt="Lorem pixum" src="asset/img/marque/logo_RTL.png" /></div>
+    <div class="brand-element"><img alt="Lorem pixum" src="asset/img/marque/logo_grazia.png" /></div>
+    <div class="brand-element"><img alt="Lorem pixum" src="asset/img/marque/logo_Echos.png" /></div>
+    <div class="brand-element"><img alt="Lorem pixum" src="asset/img/marque/logo_prix.png" /></div>
   </section>
   <section class="mosaique">
     <div class="mosaique-title">
@@ -166,7 +207,104 @@
       </div>
     </div>
     <div class="mosaique-button">
-      <a class="button" href="#">Voir toutes les prestations <img alt="Lorem pixum" src="asset/compile/img/mosaique/mobile/arrow.png" /></a>
+      <a class="button" href="#">Voir toutes les prestations <img alt="Lorem pixum" src="asset/img/icons/right_arrow.svg" /></a>
+    </div>
+  </section>
+  <section class="avis">
+    <div class="avis-title">
+      <p>Le dernier avis que <span class="title-colored">vous</span> avez laissés</p>
+    </div>
+    <ul class="avis-content">
+      <li>
+        <span class="avis-nom">Vendôme Spa</span><br/>
+        <span class="avis-lieu">Paris 75011</span><br/>
+        <div class="avis-rater-container">
+          <span class="avis-rater">Noté par Marie-Françoise</span><br/>
+          <span class="avis-date">Aujourd’hui à 17h30</span><br/>
+          <span class="avis-rate">8/10 star</span><br/>
+        </div>
+        <p class="avis-testimony">Un cadre magnifique où senteur et chaleur se marient parfaitement. Un personnel aux petits soins.</p>
+      </li>
+      <li>
+        <span class="avis-nom">Vendôme Spa</span><br/>
+        <span class="avis-lieu">Paris 75011</span><br/>
+        <div class="avis-rater-container">
+          <span class="avis-rater">Noté par Marie-Françoise</span><br/>
+          <span class="avis-date">Aujourd’hui à 17h30</span><br/>
+          <span class="avis-rate">8/10 star</span><br/>
+        </div>
+        <p class="avis-testimony">Un cadre magnifique où senteur et chaleur se marient parfaitement. Un personnel aux petits soins.</p>
+      </li>
+      <li>
+        <span class="avis-nom">Vendôme Spa</span><br/>
+        <span class="avis-lieu">Paris 75011</span><br/>
+        <div class="avis-rater-container">
+          <span class="avis-rater">Noté par Marie-Françoise</span><br/>
+          <span class="avis-date">Aujourd’hui à 17h30</span><br/>
+          <span class="avis-rate">8/10 star</span><br/>
+        </div>
+        <p class="avis-testimony">Un cadre magnifique où senteur et chaleur se marient parfaitement. Un personnel aux petits soins.</p>
+      </li>
+    </ul>
+  </section>
+  <section class="reservation">
+    <div class="reservation-title">
+      <p>Reservez dans <span class="title-colored">votre</span> ville</p>
+    </div>
+    <div class="ville">
+      <ul>
+        <li>BeautySpa à Paris</li>
+        <li>BeautySpa à Lyon</li>
+        <li>BeautySpa à Bordeaux</li>
+        <li>BeautySpa à Marseille</li>
+        <li>BeautySpa à Lille</li>
+      </ul>
+      <ul>
+        <li>BeautySpa à Paris</li>
+        <li>BeautySpa à Lyon</li>
+        <li>BeautySpa à Bordeaux</li>
+        <li>BeautySpa à Marseille</li>
+        <li>BeautySpa à Lille</li>
+      </ul>
+      <ul>
+        <li>BeautySpa à Paris</li>
+        <li>BeautySpa à Lyon</li>
+        <li>BeautySpa à Bordeaux</li>
+        <li>BeautySpa à Marseille</li>
+        <li>BeautySpa à Lille</li>
+      </ul>
+    </div>
+  </section>
+  <section class="award">
+    <div class="award-title">
+      <p><span class="title-colored">Numéro 1</span> de la reservation beauté  & bien être</p>
+    </div>
+    <div class="awar-column">
+      <div class="column1">
+        <img alt="Lorem pixum" src="asset/compile/img/logo/logo.png"/><br><br>
+        <img alt="Lorem pixum" src="asset/compile/img/logo/awards.png"/>
+      </div>
+      <div class="column2">
+        <span class="first-letter">B</span>
+        <span class="text">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+          Vivamus diam sem, aliquet a nisi eget, tempor tristique odio.
+          Praesent accumsan lectus augue, et suscipit orci sagittis at.
+          Nullam nec ligula mauris. Integer in bibendum dolor, sed luctus dui.
+          Phasellus pellentesque arcu vel mi auctor elementum. Quisque a aliquet lectus.
+          Nulla nec sollicitudin diam, non porttitor quam. Vivamus enim magna, accumsan nec sapien venenatis, imperdiet tristique nisi.
+        </span>
+      </div>
+      <div class="column3">
+        <span class="text">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+          Vivamus diam sem, aliquet a nisi eget, tempor tristique odio.
+          Praesent accumsan lectus augue, et suscipit orci sagittis at.
+          Nullam nec ligula mauris. Integer in bibendum dolor, sed luctus dui.
+          Phasellus pellentesque arcu vel mi auctor elementum. Quisque a aliquet lectus.
+          Nulla nec sollicitudin diam, non porttitor quam. Vivamus enim magna, accumsan nec sapien venenatis, imperdiet tristique nisi.
+        </span>
+      </div>
     </div>
   </section>
   <footer>
@@ -175,20 +313,81 @@
     </div>
     <div class="footer-social">
       <a href="">
-        <img alt="Lorem pixum" src="asset/compile/img/social/mobile/facebook.png"/>
+        <img alt="Lorem pixum" src="asset/img/icons/facebook1.svg"/>
       </a>
       <a href="">
-        <img alt="Lorem pixum" src="asset/compile/img/social/mobile/twitter.png"/>
+        <img alt="Lorem pixum" src="asset/img/icons/twitter.svg"/>
       </a>
       <a href="">
-        <img alt="Lorem pixum" src="asset/compile/img/social/mobile/instagram.png"/>
+        <img alt="Lorem pixum" src="asset/img/icons/insta.svg"/>
       </a>
       <a href="">
-        <img alt="Lorem pixum" src="asset/compile/img/social/mobile/gplus.png"/>
+        <img alt="Lorem pixum" src="asset/img/icons/g+.svg"/>
       </a>
       <a href="">
-        <img alt="Lorem pixum" src="asset/compile/img/social/mobile/youtubel.png"/>
+        <img alt="Lorem pixum" src="asset/img/icons/YT.svg"/>
       </a>
+    </div>
+    <div class="footer-menu">
+      <div class="menu">
+        <ul>
+          <li>Beautyspa</li>
+          <li>À propos</li>
+          <li>Devenir partenaire</li>
+          <li>On parle de nous</li>
+          <li>Recrutement</li>
+          <li>Contactez-nous</li>
+        </ul>
+        <ul>
+          <li>Beautyspa</li>
+          <li>À propos</li>
+          <li>Devenir partenaire</li>
+          <li>On parle de nous</li>
+          <li>Recrutement</li>
+          <li>Contactez-nous</li>
+        </ul>
+        <ul>
+          <li></li>
+          <li>À propos</li>
+          <li>Devenir partenaire</li>
+          <li>On parle de nous</li>
+          <li>Recrutement</li>
+          <li>Contactez-nous</li>
+        </ul>
+      </div>
+      <div class="social">
+        <ul>
+          <li>#beautyspaetvous</li>
+          <li>
+            <div class="footer-social">
+              <a href="">
+                <img alt="Lorem pixum" src="asset/img/icons/facebook1.svg"/>
+              </a>
+              <a href="">
+                <img alt="Lorem pixum" src="asset/img/icons/twitter.svg"/>
+              </a>
+              <a href="">
+                <img alt="Lorem pixum" src="asset/img/icons/insta.svg"/>
+              </a>
+              <a href="">
+                <img alt="Lorem pixum" src="asset/img/icons/g+.svg"/>
+              </a>
+              <a href="">
+                <img alt="Lorem pixum" src="asset/img/icons/YT.svg"/>
+              </a>
+            </div>
+          </li>
+          <li>Beautyspa dans la poche !</li>
+          <li>
+            <a href="">
+              <img alt="Lorem pixum" src="asset/img/social/app_store.png"/>
+            </a>
+            <a href="">
+              <img alt="Lorem pixum" src="asset/img/social/google_play.png"/>
+            </a>
+          </li>
+        </ul>
+      </div>
     </div>
     <div class="footer-ml">
       <p>@ Copyright 2014 Beautyspa. Tous droits réservés.</p>

@@ -6,6 +6,8 @@ input
 
 
 header
+  .desktop-top-head
+    display: none
   .top-head
     padding: 17px 0px 0px 0px
     height: auto
@@ -81,6 +83,8 @@ header
     margin-top: 50px
     .banner-background
       position: relative
+      .banner-head-logo
+        display: none
       img
         width: 100%
         display: block
@@ -105,11 +109,15 @@ header
           padding: 18px 20px 18px 20px
           height: 22px
           border-bottom: 1px solid #dbdbdb
+          img
+            height: 15px
           input
             border: 0px
             width: 80%
         li:first-child
           border-top: 1px solid #dbdbdb
+        li:last-child
+          padding: 0
       .banner-head-reservation-submit
         background-color: #c4c4c4
         text-align: center
@@ -136,7 +144,7 @@ input:-ms-input-placeholder
 
 
 .promesse
-  padding: 25px 20px 0px 20px
+  padding: 75px 20px 0px 20px
   &::after
     content: ""
     display: table
@@ -167,6 +175,14 @@ input:-ms-input-placeholder
       clear: left
     &:nth-of-type(2n)
       float: right!important
+.brand
+  display: none
+.avis
+  display: none
+.reservation
+  display: none
+.award
+  display: none
 
 .mosaique
   background-color: #F7F7F7
@@ -293,230 +309,554 @@ footer
         position: absolute
     .telechargement
       img
-        width: 62px
-        top: 10px
-        right: 5px
+        width: 55px
+        top: 21px
+        right: 8px
 .side-panel.visible
   left: 0
 
 @media only screen and (min-width: 768px)
   header
-    .top-head
-      padding: 17px 11px 11px 11px
-      height: auto
-      text-align: center
-      position: relative
-      border-bottom: 1px solid #e4e3e2
-      .icon-bruger
-        height: 20px
-        float: left
-      .icon-logo
-        width: 10rem
-      .icon-search
-        height: 22px
-        float: right
     .banner
-      .banner-background
-        position: relative
-        img
-          width: 100%
-          display: block
-        .banner-head-text
-          padding-right: 15px
-          margin: 0
-          width: 165px
-          text-align: right
-          transform: translateY(-50%)
-          position: absolute
-          top: 50%
-          right: 0
-          font-size: (11em/16)
-          font-family: Arial
       .banner-head-reservation
         ul
-          list-style-type: none
-          margin: 0
-          padding: 0
           li
-            font-family: Arial
-            padding: 18px 20px 18px 20px
-            height: 22px
-            border-bottom: 1px solid #dbdbdb
+            img
+              height: 20px
             input
-              border: 0px
-              width: 80%
+              font-size: (17em/16)
           li:first-child
-            border-top: 1px solid #dbdbdb
+        border-top: 1px solid #dbdbdb
+      .banner-background
+        .banner-head-text
+          font-size: (20em/16)
+          font-family: Arial
+          width: 300px
+      .banner-head-reservation
+        input
+          border: 0px
+          width: 80%
         .banner-head-reservation-submit
-          background-color: #c4c4c4
-          text-align: center
-          height: auto
-          padding: 12px 0px 12px 0px
           input[type=submit]
-            background-color: #262626
-            border: 0px
-            color: #FFFFFF
             width: 35%
-            height: 50px
-            border-radius: 0px
-
-  input::-webkit-input-placeholder
-    color: #929292
-  input:-moz-placeholder
-    color: #929292
-    opacity: 1
-  input::-moz-placeholder
-    color: #929292
-    opacity: 1
-  input:-ms-input-placeholder
-    color: #929292
-
 
   .promesse
-    padding: 25px 20px 0px 20px
-    &::after
-      content: ""
-      display: table
-      clear: both
     .promesse-element
-      width: 50%
-      float: left
-      font-size: (11rem/16)
-      position: relative
-      margin-bottom: 20px
       img
-        position: absolute
-        top: 2px
         height: 20px
-        width: auto
       .promesse-element-text
         padding-left: 40px
-        span
-          display: block
         .num
           font-size: (22rem/16)
-          color:  #cb9b2b
         .type
-          color: #cb9b2b
           font-size: (18rem/16)
         .desc
           font-size: (18rem/16)
-          color: #aaaaaa
-      &:nth-of-type(2n+1)
-        clear: left
-      &:nth-of-type(2n)
-        float: right!important
 
   .mosaique
-    background-color: #F7F7F7
     .mosaique-title
-      text-align: center
-      padding: 30px 12px 30px 12px
-      background-color: #F7F7F7
       p
         font-size: (22rem/16)
+    .mosaique-element
+      .mosaique-element-detail
+        font-size: (15rem/16)
+    .mosaique-button
+      padding: 0px 255px 20px 255px
+      a
+        font-size: (17rem/16)
+
+  footer
+    .footer-hastag
+      p
+        font-size: (30em/16)
+    .footer-social
+      a
+        margin-right: 45px
+        img
+          height: 40px
+    .footer-ml
+      p
+        font-size: (13em/16)
+
+  .side-panel
+    width: 300px
+    ul
+      li
+        padding: 25px 5px 25px 10px
+        p
+          margin: 0px
+          a
+            font-size: (20em/16)
+      .telechargement
+        img
+          width: 85px
+          top: 20px
+          right: 35px
+
+  .side-panel.visible
+    left: 0
+
+@media only screen and (min-width: 768px)
+  header
+    .desktop-top-head
+      display: none
+      p
+        font-size: (11em/16)
+        margin: 0
+        .sign-in
+          background-color: #262626
+          padding: 5px 10px 5px 10px
+          margin-left: 10px
+          color: #FFFFFF
+          a
+            text-decoration: none
+            color: #FFFFFF
+            img
+              height: 10px
+        .right-element
+          float: right
+          .number
+            margin-right: 30px
+            img
+              height: 15px
+              margin-right: 5px
+          .download
+            margin-right: 35px
+            img
+              margin-left: 10px
+          a
+            text-decoration: none
+            color: #262626
+    .top-head
+      display: none
+    .banner
+      margin-top: 0px
+      .banner-head-reservation
+        ul
+          li
+            img
+              height: 20px
+            input
+              font-size: (17em/16)
+          li:first-child
+        border-top: 1px solid #dbdbdb
+      .banner-background
+        .banner-head-text
+          font-size: (20em/16)
+          font-family: Arial
+          width: 300px
+      .banner-head-reservation
+        input
+          border: 0px
+          width: 80%
+        .banner-head-reservation-submit
+          input[type=submit]
+            width: 35%
+
+    .promesse
+      .promesse-element
+        img
+          height: 20px
+        .promesse-element-text
+          padding-left: 40px
+          .num
+            font-size: (22rem/16)
+          .type
+            font-size: (18rem/16)
+          .desc
+            font-size: (18rem/16)
+
+    .mosaique
+      .mosaique-title
+        p
+          font-size: (22rem/16)
+      .mosaique-element
+        .mosaique-element-detail
+          font-size: (15rem/16)
+      .mosaique-button
+        padding: 0px 255px 20px 255px
+        a
+          font-size: (17rem/16)
+
+    footer
+      .footer-hastag
+        p
+          font-size: (30em/16)
+      .footer-social
+        a
+          margin-right: 45px
+          img
+            height: 40px
+      .footer-ml
+        p
+          font-size: (13em/16)
+
+    .side-panel
+      width: 300px
+      ul
+        li
+          padding: 25px 5px 25px 10px
+          p
+            margin: 0px
+            a
+              font-size: (20em/16)
+        .telechargement
+          img
+            width: 85px
+            top: 20px
+            right: 35px
+
+    .side-panel.visible
+      left: 0
+@media only screen and (min-width: 1280px)
+  header
+    .desktop-top-head
+      display: block
+      padding: 15px 20px 15px 20px
+    .side-panel
+      left: 0
+      width: 100%
+      background: transparent
+      position: absolute
+      top: 30px
+      ul
+        padding: 0
+        width: 100%
+        li
+          padding: 0
+          border-bottom: none
+          text-align: center
+          display: inline-block
+          &:nth-child(4)
+            p
+              display: inline-flex
+              &::after
+                content: ""
+          &:nth-child(5)
+            display: none
+          &:nth-child(6)
+            display: none
+          &:nth-child(7)
+            display: none
+          p
+            &::after
+              content: "."
+              padding-left: 10px
+              padding-right: 10px
+            a
+              color: #4c4c4c
+              font-size: (20em/16)
+    .banner
+      margin-top: 0px
+      position: relative
+      .banner-background
+        .banner-head-logo
+          width: 230px
+          position: absolute
+          top: 30px
+          left: 20px
+        .banner-head-text
+          padding-right: 34%
+          margin: 0
+          width: 165px
+          text-align: right
+          position: absolute
+          top: 50%
+          right: 0
+          font-family: Arial
+          font-size: (30em/16)
+          width: 500px
+      .banner-head-reservation
+        border-top: none
+        position: absolute
+        width: 100%
+        top: 560px
+        text-align: center
+        background-color: rgba(0,0,0,0.5)
+        ul
+          display: inline-block
+          margin: 30px 170px 30px 170px
+          width: 900px
+          li
+            display: inline-block
+            float: left
+            padding: 0
+            padding: 13px 10px 13px 10px
+            border-right: 1px solid #f7f7f7
+            background: #FFFFFF
+            &:first-child
+              border-top: 0px
+            &:last-child
+              padding: 0px
+              border-right: 0px solid grey
+              background-color: transparent
+              margin-left: 10px
+            .banner-head-reservation-submit
+              background-color: transparent
+              float: left
+              padding: 0px
+              input[type=submit]
+                width: 180px
+  .promesse
+    background-color: #262626
+    padding: 25px 170px 0px 170px
+    &::after
+      content: ""
+      clear: both
+    .promesse-element
+      width: 25%
+      font-size: (11rem/16)
+      position: relative
+      margin-bottom: 20px
+      float: left
+      &:nth-of-type(2n+1)
+        clear: none
+  .mosaique
+    background-color: #F7F7F7
+    padding: 0px 165px 0px 165px
+    .mosaique-title
+      text-align: center
+      padding: 100px 0px 70px 0px
+      background-color: #F7F7F7
+      p
+        font-size: (48rem/16)
+        font-weight: 100
         margin: 0
         .title-colored
           color: #cb9b2b
     .mosaique-element
-      margin-bottom: 15px
-      .mosaique-element-img
-        img
-          width: 100%
-          display: block
-          margin-bottom: 7px
-      .mosaique-element-detail
-        font-size: (14rem/16)
-        p
-          margin: 0
-          margin-left: 5px
-        .price
-          font-style: italic
-          color: #cb9b2b
-      &:nth-of-type(3)
-        margin-right: 4%
-        width: 48%
-        float: left
-        img
-          width: 100%
-          display: block
-      &:nth-of-type(4)
-        width: 48%
-        float: left
-        p
-          margin: 0
-        img
-          width: 100%
-          display: block
     .mosaique-button
-      text-align: center
-      padding: 0px 255px 20px 255px
       a
-        text-decoration: nonegrunt
-        background-color: #fefefe
-        border: 1px solid #262626
-        color: #262626
+        background-color: #262626
+        border: 1px solid #fefefe
+        color: #fefefe
         padding-top: 20px
         padding-bottom: 20px
         border-radius: 0px
         margin-top: 25px
         position: relative
         margin-bottom: 20px
-        font-size: (17rem/16)
+        font-size: (13rem/16)
         display: block
-        img
-          width: 15px
-          position: absolute
-          right: 20px
-          top: 50%
-          transform: translateY(-50%)
-
-  footer
-    margin-top: 45px
-    .footer-hastag
+  .avis
+    .avis-title
       text-align: center
-      margin-bottom: 47px
+      padding: 100px 0px 70px 0px
+      background-color: #fefefe
       p
-        font-size: (30em/16)
-        a
-          text-decoration: none
+        font-size: (48rem/16)
+        font-weight: 100
+        margin: 0
+        .title-colored
           color: #cb9b2b
-    .footer-social
+  .reservation
+    background-color: #262626
+    .reservation-title
       text-align: center
-      padding-bottom: 39px
-      border-bottom: 1px solid #e4e3e2
-      a
-        margin-right: 38px
-        text-decoration: none
-        img
-          height: 35px
-          width: auto
+      padding: 100px 305px 70px 305px
+      p
+        font-size: (48rem/16)
+        font-weight: 100
+        margin: 0
+        color: #ffffff
+        .title-colored
+          color: #cb9b2b
+    .ville
+      padding: 0px 268px 70px 269px
+      ul
+        width: 26%
+        display: inline-block
+        padding: 0
+        clear: both
+        margin-right: 82px
         &:last-child
           margin-right: 0px
-    .footer-ml
+        li
+          list-style: none
+          margin-bottom: 30px
+          font-size: (18rem/16)
+          color: #ffffff
+          &:hover
+            color: #cb9b2b
+            cursor: pointer
+          &:last-child
+            margin-bottom: 0px
+  .award
+    background-color: #fefefe
+    .award-title
       text-align: center
-      margin-top: 30px
-      margin-bottom: 80px
+      padding: 100px 305px 70px 305px
       p
-        font-size: (13  rem/16)
-        color: #8c8c8c
-  .side-panel
-    position: absolute
-    z-index: 10
-    top: 0
-    left: -80%
-    width: 300px
-    height: 100%
-    background: #FFFFFF
-    color: #000000
-    text-align: center
-    -webkit-transition: all 400ms ease
-    transition: all 400ms ease
-    padding: 15px 0 15px 15px
-    img
-      float: right
-      height: 20px
-      margin: 0 15px 0 0
+        font-size: (48rem/16)
+        font-weight: 100
+        margin: 0
+        color: #262626
+        .title-colored
+          color: #cb9b2b
+    .awar-column
+      width: 100%
+      padding: 0 165px 50px 165px
+      clear: both
+      .column1
+        width: 22%
+        float: left
+      .column2
+        width: 28%
+        float: left
+        margin-right: 35px
+        .first-letter
+          color: #cb9b2b
+          padding: 0px 15px 0px 0px
+          font-size: (82rem/16)
+          display: inline-block
+          margin-top: -15px
+          float: left
+        .text
+          font-size: (12rem/16)
+          clear: both
+      .column3
+        width: 24%
+        float: left
+        .text
+          font-size: (12rem/16)
+          clear: both
 
-  .side-panel.visible
-    left: 0
+  .brand
+    background-color: #FFFFFF
+    padding: 35px 170px 45px 170px
+    text-align: center
+    &::after
+      content: ""
+      clear: both
+    .brand-element
+      background-color: #FFFFFF
+      width: 14%
+      font-size: (11rem/16)
+      position: relative
+      margin-bottom: 20px
+      float: left
+      p
+        font-size: (17rem/16)
+        font-weight: 100
+        margin: 0
+        color: #262626
+        .title-colored
+          color: #cb9b2b
+
+  .avis
+    padding: 0px 165px 0px 165px
+    text-align: center
+    ul
+      list-style: none
+      padding: 0px
+      text-align: left
+      li
+        padding: 0px 40px 90px 0px
+        display: inline-block
+        width: 29%
+        .avis-nom
+          font-size: (13rem/16)
+          padding-left: 20px
+        .avis-lieu
+          font-size: (13rem/16)
+          padding-left: 20px
+          color: #929292
+        .avis-rater-container
+          border-left: 2px solid #cb9b2b
+          padding-left: 15px
+          margin-top: 20px
+          .avis-rater
+            font-size: (18rem/16)
+          .avis-date
+            font-size: (11rem/16)
+          .avis-rate
+            font-size: (18rem/16)
+            color: #cb9b2b
+        .avis-testimony
+          font-size: (13rem/16)
+          padding-left: 20px
+  .brand
+    display: block
+  .avis
+    display: block
+  .reservation
+    display: block
+  .award
+    display: block
+
+  footer
+    background-color: #f7f7f7
+    margin-top: 190px
+    .footer-menu
+      .menu
+        width: 58%
+        float: left
+        background-color: #f7f7f7
+        padding: 50px 0px 50px 165px
+        ul
+          float: left
+          margin: auto
+          &:first-child
+            margin-right: 80px
+          &:last-child
+            padding-left: 80px
+            li
+              list-style: none
+              padding: 2px 0px 2px 0px
+              &:first-child
+                padding: 15px 15px 29px 0px
+                font-size: (21rem/16)
+          li
+            list-style: none
+            font-size: (13rem/16)
+            padding: 2px 0px 2px 0px
+            &:first-child
+              padding: 10px 10px 10px 0px
+              color: #cb9b2b
+              font-size: (21rem/16)
+
+      .social
+        width: 30%
+        float: left
+        padding: 50px 0px 29px 0px
+        background-color: #f7f7f7
+        ul
+          padding: 0px
+          color: #cb9b2b
+          li
+            list-style: none
+            padding: 7px 0px 7px 0px
+            &:first-child
+              color: #cb9b2b
+          .footer-social
+            padding-bottom: 0px
+            border-bottom: 0px solid #e4e3e2
+            text-align: left
+            a
+              margin-right: 20px
+              text-decoration: none
+              outline: 0
+              img
+                height: 15px
+                text-decoration: none
+
+    .footer-ml
+      display: none
+
+    .footer-hastag
+      display: none
+
+    .footer-social
+      display: none
+
+
+
+
+
+
+
+
+
+
+
+
